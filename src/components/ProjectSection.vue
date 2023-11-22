@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
         <div class="max-w-screen-xl flex flex-col  flex-wrap justify-center py-24">
             <h1
-                class="ml-2 mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-4xl dark:text-white">
+                class="ml-2 mb-8 text-2xl font-extrabold leading-none tracking-tight text-zinc-800 md:text-5xl lg:text-4xl dark:text-white">
                 Projects</h1>
             <div class="flex flex-row flex-wrap justify-center">
                 <div class="p-2 text-center ">

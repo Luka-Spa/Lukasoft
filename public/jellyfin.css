@@ -1,0 +1,10 @@
+#castCollapsible, 
+.detailPageWrapperContainer >
+.mediaInfoCriticRatingFresh,
+.mediaInfoCriticRatingRotten,
+button[data-action="play"],
+button[title="Trailer"],
+button[title="Mark played"]
+{
+    display: none;
+}

@@ -8,7 +8,11 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 /* import font awesome icon component */
 
 /* import specific icons */
-import { faCloud } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCloud,
+  faNoteSticky,
+  faDisplay,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   faGooglePlay,
   faGitAlt,
@@ -22,7 +26,7 @@ import SpookySipsPrivacy from "./views/SpookySipsPrivacy.vue";
 import VueScrollTo from "vue-scrollto";
 
 /* add icons to the library */
-library.add(faDocker, faGooglePlay, faGitAlt, faCloud);
+library.add(faDocker, faGooglePlay, faGitAlt, faCloud, faNoteSticky, faDisplay);
 
 const router = createRouter({
   history: createWebHistory(),

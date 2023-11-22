@@ -7,10 +7,9 @@ const baseUrl = import.meta.env.VITE_BASE_URL;
 
 </script>
 <template>
-  <nav class="bg-white border-gray-200 dark:bg-zinc-800 dark:border-gray-700 fixed w-full">
+  <nav class="bg-white border-gray-200 dark:bg-zinc-800 dark:border-gray-700 fixed w-full shadow-sm z-50">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <RouterLink to="/" v-scroll-to="'#home'" class="flex items-center">
-        <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" /> -->
         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Lukasoft</span>
       </RouterLink>
       <button data-collapse-toggle="navbar-dropdown" type="button"
@@ -24,11 +23,21 @@ const baseUrl = import.meta.env.VITE_BASE_URL;
       </button>
       <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
         <ul
-          class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:md:bg-zinc-800 dark:bg-zinc-800   dark:border-gray-700">
+          class="flex flex-col font-medium p-4 md:p-0 mt-4 shadow-md md:shadow-none  border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0  md:bg-white dark:md:bg-zinc-800 dark:bg-zinc-800  ">
           <li>
             <RouterLink to="/" v-scroll-to="'#home'"
-              class="block py-2 pl-3 pr-4 text-white bg-sky-700 rounded md:bg-transparent  md:p-0 md:dark:bg-transparent"
+              class="block py-2 pl-3 pr-4 dark:text-white  rounded md:bg-transparent  md:p-0 md:dark:bg-transparent"
               aria-current="page">Home</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/" v-scroll-to="'#projects'"
+              class="block py-2 pl-3 pr-4 dark:text-white  rounded md:bg-transparent  md:p-0  md:dark:bg-transparent">
+              Projects</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/" v-scroll-to="'#services'"
+              class="block py-2 pl-3 pr-4 dark:text-white  rounded md:bg-transparent  md:p-0  md:dark:bg-transparent">
+              Services</RouterLink>
           </li>
           <li>
             <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
@@ -40,34 +49,38 @@ const baseUrl = import.meta.env.VITE_BASE_URL;
               </svg></button>
             <!-- Dropdown menu -->
             <div id="dropdownNavbar"
-              class="z-10 hidden font-600 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-              <ul class="py-2 text-md text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
-                <li>
-                  <a :href="`https://portainer.${baseUrl}`" target="_blank"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"><font-awesome-icon
-                      class="mr-2" icon="fa-brands fa-docker" />Portainer</a>
-                </li>
-                <li>
-                  <a :href="`https://drive.${baseUrl}`" target="_blank"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"><font-awesome-icon
-                      class="mr-2" icon="fa-solid fa-cloud" />Drive</a>
-                </li>
-                <li>
+              class="z-10 hidden font-600 bg-white divide-y divide-gray-100 rounded-lg shadow-md border dark:border-zinc-800 w-44 dark:bg-gray-700 dark:divide-gray-600">
+              <ul class="fa-ul p-2 text-md text-gray-700 dark:text-gray-400 " aria-labelledby="dropdownLargeButton">
+                <li class="my-3">
                   <a :href="`https://git.${baseUrl}`" target="_blank"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"><font-awesome-icon
-                      class="mr-2" icon="fa-brands fa-git-alt" />Gitea</a>
+                    class="hover:text-zinc-950 dark:hover:text-white"><font-awesome-icon class="fa-li"
+                      icon="fa-brands fa-git-alt" />Gitea</a>
+                </li>
+                <li class="my-3">
+                  <a :href="`https://notes.${baseUrl}`" target="_blank"
+                    class="hover:text-zinc-950 dark:hover:text-white"><font-awesome-icon class="fa-li"
+                      icon="fa-solid fa-note-sticky" />Notes</a>
+                </li>
+                <li class="my-3">
+                  <a :href="`https://portainer.${baseUrl}`" target="_blank"
+                    class="  hover:text-zinc-950 dark:hover:text-white"><font-awesome-icon class="fa-li"
+                      icon="fa-brands fa-docker" />Portainer</a>
+                </li>
+                <li class="my-3">
+                  <a :href="`https://drive.${baseUrl}`" target="_blank"
+                    class="hover:text-zinc-950 dark:hover:text-white"><font-awesome-icon class="fa-li"
+                      icon="fa-solid fa-cloud" />Drive</a>
+                </li>
+                <li class="my-3">
+                  <a :href="`https://movies.${baseUrl}`" target="_blank"
+                    class="hover:text-zinc-950 dark:hover:text-white"><font-awesome-icon class="fa-li"
+                      icon="fa-solid fa-display" />Jellyfin</a>
                 </li>
               </ul>
 
             </div>
           </li>
-          <li>
 
-            <RouterLink to="/" v-scroll-to="'#projects'"
-              class="block py-2 pl-3 pr-4 text-white bg-sky-700 rounded md:bg-transparent  md:p-0  md:dark:bg-transparent">
-              Projects</RouterLink>
-
-          </li>
         </ul>
       </div>
     </div>
